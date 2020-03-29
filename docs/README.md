@@ -36,14 +36,19 @@ The duty cycle must vary between 3 and 1023; this maps to a value between approx
 
 ## Example
 See the examples directory. 
+
 Below is a test of the SlowSawtooth on a generic Pro Micro. Basically it sweeps the duty cycle from 0 to 1023 on a fixed frequency. It is called 'SlowSawtooth', because with the right filter it could generate a sawtooth waveform.
+
 The screengrab from my HP 54201D oscilloscope showing the waveform at 100kHz with 30% duty cycle (Timer4.pwm set to 308 and on pin 10 of the Pro Micro). I've attached a 1nF polyester film capacitor for noise suppression.
+
 [Waveform from pin 10](screengrab-100kHz-30pct.png)
 [Connect a capacitor for noise supression](promicro.jpg)
+
 It has been tested up to **1Mhz** (period of 1us). 
 
 ## Thanks to
 Vincente Jiménez. His [post](http://r6500.blogspot.com/2014/12/fast-pwm-on-arduino-leonardo.html) clarifies a lot about the High Speed PWM
+
 Paul Stoffregen. For his great [TimerThree library](https://github.com/PaulStoffregen/TimerThree).
 
 ## License
