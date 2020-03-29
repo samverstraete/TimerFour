@@ -1,0 +1,16 @@
+{
+  "name": "TimerFour",
+  "version": "1.0",
+  "keywords": "timer",
+  "description": "Allow usage of the 10-bit hardware high speed Timer4 on ATMega16u4 and ATMega32u4",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/samverstraete/TimerFour.git"
+  },
+  "frameworks": "arduino",
+  "platforms":
+  [
+    "atmelavr"    
+  ]
+}
