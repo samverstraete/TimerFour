@@ -14,6 +14,7 @@ It has only been tested (yet) on a generic Pro Micro. For the Pro Micro you can 
 | PB5        | PCINT5/OC1A/#OC4B/ADC12 |           9 | Inverse of 10 |
 | PD7        | T0/OC4D/ADC10           |           6 |               |
 | PD6        | T1/#OC4D/ADC9           |        \* 12 | Inverse of 6  |
+
 *(\*) Not connected on the Pro Micro*
 
 The minimum period for this library is 1 us (1 MHz) the maximum about 2 s (0.5 kHz).
@@ -43,7 +44,7 @@ Below is a test of the SlowSawtooth on a generic Pro Micro. Basically it sweeps 
 The screengrab from my HP 54201D oscilloscope showing the waveform at 100kHz with 30% duty cycle (Timer4.pwm set to 308 and on pin 10 of the Pro Micro). I've attached a 1nF polyester film capacitor for noise suppression.
 
 ![Waveform from pin 10](screengrab-100kHz-30pct.png)
-![Connect a capacitor for noise supression](promicro.jpg)
+![Connect a capacitor for noise supression](promicro1.jpg)
 
 It has been tested up to **1Mhz** (period of 1us). 
 
