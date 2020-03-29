@@ -3,6 +3,7 @@
 
 ## Description
 This is a port of the Paul Stoffregens [TimerThree library](https://github.com/PaulStoffregen/TimerThree) to the ATMega16u4 or ATMega32u4, so you can use the internal High Speed Timer4 on selected ports. The ATMega32u4 is commonly found on an Arduino Micro, Leonardo, Yùn, Sparkfuns' (or generic) Pro Micro, Fio, ...
+
 It has only been tested (yet) on a generic Pro Micro. For the Pro Micro you can use pin 5, 6, 9, 10, ~~12 or 13~~. However, note that half of the ports are complimentary ports, so you can't set the duty cycle seperately, see the table below:
 
 | ATMega Pin |     16u4/32u4 Name      | Arduino Pin |     Note      |
@@ -41,15 +42,14 @@ Below is a test of the SlowSawtooth on a generic Pro Micro. Basically it sweeps 
 
 The screengrab from my HP 54201D oscilloscope showing the waveform at 100kHz with 30% duty cycle (Timer4.pwm set to 308 and on pin 10 of the Pro Micro). I've attached a 1nF polyester film capacitor for noise suppression.
 
-[Waveform from pin 10](screengrab-100kHz-30pct.png)
-[Connect a capacitor for noise supression](promicro.jpg)
+![Waveform from pin 10](screengrab-100kHz-30pct.png)
+![Connect a capacitor for noise supression](promicro.jpg)
 
 It has been tested up to **1Mhz** (period of 1us). 
 
 ## Thanks to
-Vincente Jiménez. His [post](http://r6500.blogspot.com/2014/12/fast-pwm-on-arduino-leonardo.html) clarifies a lot about the High Speed PWM
-
-Paul Stoffregen. For his great [TimerThree library](https://github.com/PaulStoffregen/TimerThree).
+- Vincente Jiménez. His [post](http://r6500.blogspot.com/2014/12/fast-pwm-on-arduino-leonardo.html) clarifies a lot about the High Speed PWM
+- Paul Stoffregen. For his great [TimerThree library](https://github.com/PaulStoffregen/TimerThree).
 
 ## License
 "Creative Commons Attribution 3.0" license : http://creativecommons.org/licenses/by/3.0/
