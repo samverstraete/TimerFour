@@ -70,10 +70,12 @@ class TimerFour
 		//
 		if (microseconds < 1000) {
 			cycles = (F_PLL / 2000000) * microseconds;
-			PLLFRQ = (PLLFRQ & 0xCF) | 0x10; // Use PLL 96MHz
+			//PLLFRQ = (PLLFRQ & 0xCF) | 0x10; // Use PLL 96MHz
+			PLLFRQ = 0x5A; // something resets the PLL to 48Mhz after a power cycle, not sure why, but set the PLL correctly, see issue #1
 		} else if (microseconds < 2000) {
 			cycles = (F_PLL / 2000000 /2) * microseconds;
-			PLLFRQ = (PLLFRQ & 0xCF) | 0x30; // Use PLL 96MHz / 2 = 48MHz
+			//PLLFRQ = (PLLFRQ & 0xCF) | 0x30; // Use PLL 96MHz / 2 = 48MHz
+			PLLFRQ = 0x7A; // see above
 		} else {
 			PLLFRQ = (PLLFRQ & 0xCF) | 0x00; // Use system clock
 		}
